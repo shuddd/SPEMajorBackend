@@ -27,6 +27,9 @@ public class TrekRoutes {
 	
 	@Column
 	private long gId;
+	
+	@Column
+	private String imageId;
 
 	public long getpId() {
 		return pId;
@@ -42,6 +45,14 @@ public class TrekRoutes {
 
 	public void setTrekName(String trekName) {
 		this.trekName = trekName;
+	}
+
+	public String getImageId() {
+		return imageId;
+	}
+
+	public void setImageId(String imageId) {
+		this.imageId = imageId;
 	}
 
 	public String getPlaceName() {
@@ -68,12 +79,13 @@ public class TrekRoutes {
 		this.gId = gId;
 	}
 
-	public TrekRoutes(long pId, String trekName, String placeName, long price, long gId) {
+	public TrekRoutes(long pId, String trekName, String placeName, long price, long gId, String imageId) {
 		super();
 		this.trekName = trekName;
 		this.placeName = placeName;
 		this.price = price;
 		this.gId = gId;
+		this.imageId = imageId;
 	}
 
 	public TrekRoutes() {
@@ -84,8 +96,9 @@ public class TrekRoutes {
 	@Override
 	public String toString() {
 		return "TrekRoutes [pId=" + pId + ", trekName=" + trekName + ", placeName=" + placeName + ", price=" + price
-				+ ", gId=" + gId + "]";
+				+ ", gId=" + gId + ", imageId=" + imageId + "]";
 	}
+
 	
 	
 	

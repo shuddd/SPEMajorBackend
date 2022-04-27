@@ -38,7 +38,7 @@ public class CustomerController {
 	
 	
 
-	@PostMapping("/customersignin")
+	@PostMapping("/customer/signin")
 	public ResponseEntity<String> customerLogin(@RequestBody Customer customer) {
 		String uname = customer.getEmailId();
 		String pass = customer.getPassword();

@@ -8,5 +8,7 @@ public interface CustomerService {
 
 	public List<Customer> getCustomers();
 	
+	Customer login(String emailId, String password);
+	
 	public Customer addCustomer(Customer customer);
 }

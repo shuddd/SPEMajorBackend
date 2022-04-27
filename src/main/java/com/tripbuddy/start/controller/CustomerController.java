@@ -16,7 +16,7 @@ import com.tripbuddy.start.services.CustomerService;
 
 @CrossOrigin
 @RestController
-public class CutomerController {
+public class CustomerController {
 
 	@Autowired
 	private CustomerService customerService;

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,6 +33,13 @@ public class CustomerServiceImpl implements CustomerService{
 		custRepo.save(customer);
 		return customer;
 	}
+	
+	@Override
+	public Customer login(String emailId, String password) {
+		return custRepo.findByUsernameAndPassword(emailId, password);
+	}
+	
+	
 	
 	
 }

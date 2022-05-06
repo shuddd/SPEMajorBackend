@@ -17,6 +17,8 @@ public class Booking {
 	@Column
  private String emailID;
  ;
+ @Column
+ private String approved;
 	@Column
  private long pId;
 	@Column
@@ -64,13 +66,21 @@ private long contactNo;
 	public String getEmailID() {
 		return emailID;
 	}
+	public String getApproved() {
+		return approved;
+	}
+	public void setApproved(String approved) {
+		this.approved = approved;
+	}
 	public void setEmailID(String emailID) {
 		this.emailID = emailID;
 	}
-	public Booking(long id, String emailID, long pId, long countOfPpl, long contactNo, String address) {
+	public Booking(long id, String emailID, String approved, long pId, long countOfPpl, long contactNo,
+			String address) {
 		super();
 		Id = id;
 		this.emailID = emailID;
+		this.approved = approved;
 		this.pId = pId;
 		this.countOfPpl = countOfPpl;
 		this.contactNo = contactNo;
@@ -78,11 +88,9 @@ private long contactNo;
 	}
 	@Override
 	public String toString() {
-		return "Booking [Id=" + Id + ", emailID=" + emailID + ", pId=" + pId + ", countOfPpl=" + countOfPpl
-				+ ", contactNo=" + contactNo + ", address=" + address + "]";
+		return "Booking [Id=" + Id + ", emailID=" + emailID + ", approved=" + approved + ", pId=" + pId
+				+ ", countOfPpl=" + countOfPpl + ", contactNo=" + contactNo + ", address=" + address + "]";
 	}
 	
-	
-
 	
 }

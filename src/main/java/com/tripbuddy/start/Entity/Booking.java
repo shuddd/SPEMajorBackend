@@ -15,7 +15,8 @@ public class Booking {
 	private long Id;
 	
 	@Column
- private String trekName;
+ private String emailID;
+ ;
 	@Column
  private long pId;
 	@Column
@@ -28,12 +29,7 @@ private long contactNo;
 	public void setId(long id) {
 		Id = id;
 	}
-	public String getTrekName() {
-		return trekName;
-	}
-	public void setTrekName(String trekName) {
-		this.trekName = trekName;
-	}
+	
 	public Long getpId() {
 		return pId;
 	}
@@ -60,26 +56,33 @@ private long contactNo;
 	}
 	@Column
 	private String address;
-	public Booking(long id, String trekName, Long pId, Long countOfPpl, Long contactNo, String address) {
+	
+	public Booking() {
 		super();
-		
-		this.trekName = trekName;
+		// TODO Auto-generated constructor stub
+	}
+	public String getEmailID() {
+		return emailID;
+	}
+	public void setEmailID(String emailID) {
+		this.emailID = emailID;
+	}
+	public Booking(long id, String emailID, long pId, long countOfPpl, long contactNo, String address) {
+		super();
+		Id = id;
+		this.emailID = emailID;
 		this.pId = pId;
 		this.countOfPpl = countOfPpl;
 		this.contactNo = contactNo;
 		this.address = address;
 	}
-	public Booking() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
 	@Override
 	public String toString() {
-		return "Booking [Id=" + Id + ", trekName=" + trekName + ", pId=" + pId + ", countOfPpl=" + countOfPpl
+		return "Booking [Id=" + Id + ", emailID=" + emailID + ", pId=" + pId + ", countOfPpl=" + countOfPpl
 				+ ", contactNo=" + contactNo + ", address=" + address + "]";
 	}
- 
- 
+	
+	
 
 	
 }

@@ -37,6 +37,7 @@ public class CustomerServiceImpl implements CustomerService{
 	@Override
 	public Customer login(String emailId, String password) {
 		return custRepo.findByEmailIdAndPassword(emailId, password);
+		
 	}
 	
 	

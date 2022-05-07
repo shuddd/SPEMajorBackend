@@ -34,7 +34,19 @@ public class BookServiceImpl implements BookService{
 	public List<Booking> getBookbyid(String guideId) {
 
 	return bookRepo.getBookbyId(guideId);
+	
 	}
+	
+	@Override
+	public Booking setapprove(Booking booking) {
+		
+		bookRepo.save(booking);
+		return booking;
+		
+	}
+	
+	
+	
 	
 	
 	

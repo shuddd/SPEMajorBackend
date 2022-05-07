@@ -16,7 +16,7 @@ public class Booking {
 	
 	@Column
  private String emailID;
- ;
+ 
  @Column
  private String approved;
 	@Column

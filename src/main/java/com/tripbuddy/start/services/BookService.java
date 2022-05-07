@@ -14,6 +14,8 @@ public interface BookService {
 	
 	public List<Booking>  getBookbyid(String guideId);
 	
+	public Booking setapprove(Booking booking);
+	
 	
 	
 }

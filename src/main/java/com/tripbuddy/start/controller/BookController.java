@@ -8,8 +8,10 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
 
 import com.tripbuddy.start.Entity.Booking;
 import com.tripbuddy.start.Entity.Customer;
@@ -42,6 +44,13 @@ public class BookController {
 		{
 			return this.bookService.getBookbyid(guideId);
 			
+		}
+		
+		
+		@PutMapping("/setapprove")
+		public Booking updateCourse(@RequestBody Booking booking)
+		{
+			return this.bookService.setapprove(booking);
 		}
 		
 	

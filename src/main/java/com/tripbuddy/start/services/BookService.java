@@ -16,7 +16,7 @@ public interface BookService {
 	
 	public Booking setapprove(Booking booking);
 	
-	public List<Booking>  getCustBookingDetails(String custId);
+	public List<Object[]>  getCustBookingDetails(String custId);
 	
 	
 	

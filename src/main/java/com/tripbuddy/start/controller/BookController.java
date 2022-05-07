@@ -54,7 +54,7 @@ public class BookController {
 		}
 		
 		@GetMapping("/bookingdetailscust/{custId}")
-		public List<Booking> getCustBookingDetails(@PathVariable String custId)
+		public List<Object[]> getCustBookingDetails(@PathVariable String custId)
 		{
 			return this.bookService.getCustBookingDetails(custId);
 			

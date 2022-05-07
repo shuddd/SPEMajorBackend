@@ -35,6 +35,10 @@ public class GuideServiceImpl implements GuideService {
 		return guide;
 	}
 
+	@Override
+	public Guide login(String emailId, String password) {
+		return guideRepo.findByEmailIdAndPassword(emailId, password);
+	}
 
 
 

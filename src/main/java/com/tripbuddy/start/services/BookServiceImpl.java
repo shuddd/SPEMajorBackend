@@ -45,6 +45,12 @@ public class BookServiceImpl implements BookService{
 		
 	}
 	
+	@Override
+	public List<Booking> getCustBookingDetails(String custId) {
+
+	return bookRepo.getCustBookingDetails(custId);
+	
+	}
 	
 	
 	

@@ -53,6 +53,15 @@ public class BookController {
 			return this.bookService.setapprove(booking);
 		}
 		
+		@GetMapping("/bookingdetailscust/{custId}")
+		public List<Booking> getCustBookingDetails(@PathVariable String custId)
+		{
+			return this.bookService.getCustBookingDetails(custId);
+			
+		}
+		
+		
+		
 	
 
 }

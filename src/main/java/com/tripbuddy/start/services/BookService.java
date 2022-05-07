@@ -12,4 +12,8 @@ public interface BookService {
 	
 	public List<Booking> getBooking();
 	
+	public List<Booking>  getBookbyid(String guideId);
+	
+	
+	
 }

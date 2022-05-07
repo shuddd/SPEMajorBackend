@@ -30,6 +30,12 @@ public class BookServiceImpl implements BookService{
 		return booking;
 	}
 	
+	@Override
+	public List<Booking> getBookbyid(String guideId) {
+
+	return bookRepo.getBookbyId(guideId);
+	}
+	
 	
 	
 }
